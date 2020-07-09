@@ -1,0 +1,13 @@
+{
+  "name": "apiv2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "kayn": "^0.10.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

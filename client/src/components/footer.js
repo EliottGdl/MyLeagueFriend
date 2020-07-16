@@ -33,7 +33,7 @@ const Footer = ({children,link,type}) => ({
 
         return (
             <footer style={finalStyle}>
-All rights reserved. Myleaguefriends.com isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.                <br/>
+All rights reserved. Myleaguefriend.com isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.                <br/>
                 Link of the background : {link}    -     Website made by Eliott Gandiolle https://github.com/eliottgdl
             </footer>
         );

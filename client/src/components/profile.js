@@ -11,6 +11,8 @@ import "./styles.css";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import Footer from "./footer";
+import { Button } from "@material-ui/core";
+import "./profile.css"
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -73,7 +75,7 @@ export default class Profile extends Component {
       actuals = "";
     }
 
-    if (actuals.indexOf(newUser) == -1) {
+    if (actuals.indexOf(newUser) == -1 && actuals.split(";").length < 11) {
       actuals += newUser + ";";
 
       localStorage.setItem("users", actuals);
@@ -133,6 +135,7 @@ export default class Profile extends Component {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                borderBottom: "1px solid",
               }}
             >
               <img src={link} alt="Icon" width="100" height="100" />
@@ -206,8 +209,12 @@ export default class Profile extends Component {
               <Typography variant="h5" gutterBottom style={{ marginRight: 20 }}>
                {this.props.infoRank.isRanked ? this.props.infoRank.tier + " " + this.props.infoRank.rank + " " + this.props.infoRank.lp + "LP" : "UNRANKED"}
               </Typography>
-              <img src={rank} alt="Icon" width="100" height="100" />
+              <img src={rank} alt="Icon" width="100" height="100" style={{marginRight:20}}/>
+              <a className="favLink" onClick={() => {window.localStorage.clear();window.location.reload();}} > Sign out </a>
+
             </div>
+
+
           </Paper>
         </div>
 

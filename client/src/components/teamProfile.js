@@ -100,7 +100,7 @@ export default class TeamProfile extends Component {
                   style={style}
                   variant="subtitle1"
                 >
-                  SMURFING ?
+                  VERY GOOD
                 </Typography>
               ) : this.state.infoRank.winR > 58 ||
                 (this.state.infoRank.wins + this.state.infoRank.loses > 200 &&
@@ -116,14 +116,14 @@ export default class TeamProfile extends Component {
                   style={style}
                   variant="subtitle1"
                 >
-                  Very bad
+                  NEED HELP
                 </Typography>
               ) : this.state.infoRank.wins + this.state.infoRank.loses > 1500 && this.state.infoRank.winR < 51 ? (
                 <Typography
                   style={style}
                   variant="subtitle1"
                 >
-                  STUCK
+                  {"> 1000 GAMES"}
                 </Typography>)
                 :
                 ""

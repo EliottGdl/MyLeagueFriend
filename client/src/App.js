@@ -8,13 +8,12 @@ import {
 import HomePage from "./HomePage";
 import InGame from "./components/inGame";
 import ReactGA from 'react-ga';
-import auth from './auth.ts'; // Sample authentication provider
 import { createBrowserHistory } from 'history';
 
 const trackingId = "UA-172958383-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 ReactGA.set({
-  userId: auth.currentUserId(),
+  userId: window.localStorage.getItem("mainUser"),
   // any data that is relevant to the user session
   // that you would like to track with google analytics
 })

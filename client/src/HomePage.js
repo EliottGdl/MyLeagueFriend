@@ -8,6 +8,7 @@ import { callAPIuser, callAPIrank, callIsInGame } from "./util";
 import { Redirect } from "react-router-dom";
 import Footer from "./components/footer";
 import { createMuiTheme, responsiveFontSizes,ThemeProvider  } from '@material-ui/core/styles';
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 

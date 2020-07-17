@@ -3,7 +3,7 @@ import TeamProfile from "./teamProfile";
 import Backscreen from "../assets/backInGame.jpg";
 import Typography from "@material-ui/core/Typography";
 import { getChampionsInfo, callIsInGame } from "../util";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default class MainATH extends Component {
   constructor(props) {
@@ -106,12 +106,12 @@ export default class MainATH extends Component {
             </div>
             <a href={"https://porofessor.gg/fr/live/euw/" + this.props.users[1]} > Click here to see the Porofessor analysis </a>
 
-            <a onClick={() => this.setState({goHome:true})}> Return home </a>
+            <Link to={"/"}> Return home </Link>
             </React.Fragment>
         ) : (
           <div> 
           "Loading"
-          <a onClick={() => this.setState({goHome:true})}> Return home </a>
+          <Link to={"/"}> Return home </Link>
           </div>
 
         )}

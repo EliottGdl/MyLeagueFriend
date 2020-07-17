@@ -121,7 +121,7 @@ export default class HomePage extends Component {
                   But first, tell us what's your username ?
                 </Typography>
                 <Search registerName={this.registerBaseUser} />
-                <Footer link={ "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-ciel-etoile-957061/"}> 
+                <Footer link={ "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-constellation-355465/"}> 
                   All rights reserved. Myleaguefriends.com isn't endorsed by
                   Riot Games and doesn't reflect the views or opinions of Riot
                   Games or anyone officially involved in producing or managing

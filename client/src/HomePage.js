@@ -109,19 +109,19 @@ export default class HomePage extends Component {
                 <Typography
                   variant="h2"
                   gutterBottom
-                  style={{ marginTop: 280, textAlign: "center" }}
+                  style={{ color:"white",marginTop: 280, textAlign: "center" }}
                 >
                   Check out how your friends are doing in league ranked
                 </Typography>
                 <Typography
                   variant="h2"
                   gutterBottom
-                  style={{ textAlign: "center" }}
+                  style={{ color:"white",textAlign: "center" }}
                 >
                   But first, tell us what's your username ?
                 </Typography>
                 <Search registerName={this.registerBaseUser} />
-                <Footer link={"https://imgur.com/gallery/kPHDsTO"}>
+                <Footer link={ "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-ciel-etoile-957061/"}> 
                   All rights reserved. Myleaguefriends.com isn't endorsed by
                   Riot Games and doesn't reflect the views or opinions of Riot
                   Games or anyone officially involved in producing or managing
@@ -146,3 +146,4 @@ export default class HomePage extends Component {
     );
   }
 }
+//"https://imgur.com/gallery/kPHDsTO"}

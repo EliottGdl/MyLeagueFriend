@@ -71,6 +71,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
+        
         {this.state.inGame == null ? (
           <div>
             {this.state.basicUsername && true ? (

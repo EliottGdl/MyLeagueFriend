@@ -3,12 +3,13 @@ import TeamProfile from "./teamProfile";
 import Backscreen from "../assets/backInGame.jpg";
 import Typography from "@material-ui/core/Typography";
 import { getChampionsInfo, callIsInGame } from "../util";
+import { Redirect } from "react-router-dom";
 
 export default class MainATH extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { gameInfo: undefined, champsInfo: undefined };
+    this.state = { goHome:false, gameInfo: undefined, champsInfo: undefined };
   }
 
   startSearchingApi = async () => {
@@ -42,11 +43,16 @@ export default class MainATH extends Component {
           top: 0,
         }}
       >
+        {this.state.goHome ? (<Redirect
+          to={
+            "/"
+          }
+        />) : 
         <Typography style={{ marginTop: 60 }} variant="h4" gutterBottom>
           In game for{" "}
           {this.state.gameInfo ? Math.floor(this.state.gameInfo.gameLength / 60): "-"} minutes
         </Typography>
-
+        }
         {this.state.gameInfo ? (
     <React.Fragment>
     <div
@@ -100,12 +106,12 @@ export default class MainATH extends Component {
             </div>
             <a href={"https://porofessor.gg/fr/live/euw/" + this.props.users[1]} > Click here to see the Porofessor analysis </a>
 
-            <a href={window.location.origin}> Return home </a>
+            <a onClick={() => this.setState({goHome:true})}> Return home </a>
             </React.Fragment>
         ) : (
           <div> 
           "Loading"
-          <a href={window.location.origin}> Return home </a>
+          <a onClick={() => this.setState({goHome:true})}> Return home </a>
           </div>
 
         )}

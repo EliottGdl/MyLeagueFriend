@@ -5,6 +5,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./Links.css";
+import { Redirect } from "react-router-dom";
 
 export default class FriendProfile extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class FriendProfile extends Component {
       infoRank: undefined,
       isLoading: true,
       inGame: undefined,
+      redirect : false,
     };
   }
 
@@ -41,6 +43,16 @@ export default class FriendProfile extends Component {
       let hourW = wasted % 24;
 
       return (
+        <div>
+        {this.state.redirect ? (<Redirect
+          to={
+            "/inGame/" +
+            this.state.infoJoueur.id +
+            "=" +
+            this.state.infoJoueur.name
+          }
+        />) : 
+        
         <Paper
           style={{
             display: "flex",
@@ -72,13 +84,7 @@ export default class FriendProfile extends Component {
 
             {this.state.inGame ? (
               <a
-                href={
-                  window.location.origin +
-                  "/inGame/" +
-                  this.state.infoJoueur.id +
-                  "=" +
-                  this.state.infoJoueur.name
-                }
+                onClick={() => this.setState({redirect:true})}
               >
                 <Typography
                   style={{ color: "red", fontWeight: "bold" }}
@@ -161,7 +167,7 @@ export default class FriendProfile extends Component {
             Delete
           </Button>
         </Paper>
-      );
+      } </div>);
     } else if (
       this.state.infoRank &&
       !(this.state.infoRank.isRanked)

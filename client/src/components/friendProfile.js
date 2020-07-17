@@ -5,7 +5,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./Links.css";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default class FriendProfile extends Component {
   constructor(props) {
@@ -83,8 +83,13 @@ export default class FriendProfile extends Component {
             />
 
             {this.state.inGame ? (
-              <a
-                onClick={() => this.setState({redirect:true})}
+              <Link
+                to={
+                  "/inGame/" +
+                  this.state.infoJoueur.id +
+                  "=" +
+                  this.state.infoJoueur.name
+                }
               >
                 <Typography
                   style={{ color: "red", fontWeight: "bold" }}
@@ -94,7 +99,7 @@ export default class FriendProfile extends Component {
                   {" "}
                   {this.state.infoJoueur.name} ({this.state.inGame.type}){" "}
                 </Typography>
-              </a>
+              </Link>
             ) : (
               <Typography variant="subtitle1" gutterBottom>
                 {" "}

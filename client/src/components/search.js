@@ -95,8 +95,8 @@ export default class Search extends Component {
 
 const topUsers = [
   { name: "8cmTrueDamage" },
-  { name: "René Tuning" },
-  { name: "XXXTENTACULE" },
-  { name: "Vachette Hybride" },
-  { name: "FULL P4U3 T5F2" },
+  { name: "Polish Wonderb0y" },
+  { name: "Just a trickster" },
+  { name: "Robert Chase" },
+  { name: "FNC Rhobalas" },
 ];

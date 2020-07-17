@@ -7,6 +7,9 @@ import Backscreen from "./assets/runeterraHome.jpg";
 import { callAPIuser, callAPIrank, callIsInGame } from "./util";
 import { Redirect } from "react-router-dom";
 import Footer from "./components/footer";
+import { createMuiTheme, responsiveFontSizes,ThemeProvider  } from '@material-ui/core/styles';
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -106,6 +109,8 @@ export default class HomePage extends Component {
                   top: 0,
                 }}
               >
+                <ThemeProvider theme={theme}>
+
                 <Typography
                   variant="h2"
                   gutterBottom
@@ -120,6 +125,9 @@ export default class HomePage extends Component {
                 >
                   But first, tell us what's your username ?
                 </Typography>
+
+                </ThemeProvider>
+
                 <Search registerName={this.registerBaseUser} />
                 <Footer link={ "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-constellation-355465/"}> 
                   All rights reserved. Myleaguefriends.com isn't endorsed by

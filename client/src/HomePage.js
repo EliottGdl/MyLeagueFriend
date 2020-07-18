@@ -7,7 +7,12 @@ import Backscreen from "./assets/runeterraHome.jpg";
 import { callAPIuser, callAPIrank, callIsInGame } from "./util";
 import { Redirect } from "react-router-dom";
 import Footer from "./components/footer";
-import { createMuiTheme, responsiveFontSizes,ThemeProvider  } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import CookieConsent from "react-cookie-consent";
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
@@ -72,7 +77,6 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        
         {this.state.inGame == null ? (
           <div>
             {this.state.basicUsername && true ? (
@@ -82,11 +86,12 @@ export default class HomePage extends Component {
                     display: "flex",
                     alignItems: "center",
                     flexDirection: "column",
-                    marginTop:400,
+                    marginTop: 400,
                   }}
                 >
-                  Your profile is loading, please wait a few second (refresh the page if it's to long) ...
-                  <CircularProgress style={{marginTop:20}}/>
+                  Your profile is loading, please wait a few second (refresh the
+                  page if it's to long) ...
+                  <CircularProgress style={{ marginTop: 20 }} />
                 </div>
               ) : (
                 <div>
@@ -94,7 +99,6 @@ export default class HomePage extends Component {
                     infoJoueur={this.state.infoJoueur}
                     infoRank={this.state.infoRank}
                   />
-                  
                 </div>
               )
             ) : (
@@ -112,26 +116,41 @@ export default class HomePage extends Component {
                 }}
               >
                 <ThemeProvider theme={theme}>
-
-                <Typography
-                  variant="h2"
-                  gutterBottom
-                  style={{ color:"white",marginTop: 280, textAlign: "center" }}
-                >
-                  Check out how your friends are doing in league ranked
-                </Typography>
-                <Typography
-                  variant="h2"
-                  gutterBottom
-                  style={{ color:"white",textAlign: "center" }}
-                >
-                  But first, tell us what's your username ?
-                </Typography>
-
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    style={{
+                      color: "white",
+                      marginTop: 280,
+                      textAlign: "center",
+                    }}
+                  >
+                    Check out how your friends are doing in league ranked
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    style={{ color: "white", textAlign: "center" }}
+                  >
+                    But first, tell us what's your username ?
+                  </Typography>
                 </ThemeProvider>
 
                 <Search registerName={this.registerBaseUser} />
-                <Footer link={ "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-constellation-355465/"}> 
+                <CookieConsent
+                  location="bottom"
+                  buttonText="Accept"
+                  style={{ background: "#2B373B" }}
+                  buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                  expires={150}
+                >
+                  This website uses cookies to enhance the user experience. By continuing your visit you agree to the use of them.
+                </CookieConsent>
+                <Footer
+                  link={
+                    "https://www.pexels.com/fr-fr/photo/astronomie-celebrites-ciel-constellation-355465/"
+                  }
+                >
                   All rights reserved. Myleaguefriends.com isn't endorsed by
                   Riot Games and doesn't reflect the views or opinions of Riot
                   Games or anyone officially involved in producing or managing

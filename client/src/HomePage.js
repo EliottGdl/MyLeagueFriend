@@ -140,7 +140,8 @@ export default class HomePage extends Component {
                 <CookieConsent
                   location="bottom"
                   buttonText="Accept"
-                  style={{ background: "#2B373B" }}
+                  style={{display:"flex",flexDirection:"row",alignItems:"center", background: "#2B373B" }}
+
                   buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                   expires={150}
                 >

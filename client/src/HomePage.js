@@ -142,7 +142,7 @@ export default class HomePage extends Component {
                   buttonText="Accept"
                   style={{display:"flex",flexDirection:"row",alignItems:"center", background: "#2B373B" }}
 
-                  buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                  buttonStyle={{ color: "#4e503b", fontSize: "13px", width : 200}}
                   expires={150}
                 >
                   This website uses cookies to enhance the user experience. By continuing your visit you agree to the use of them.

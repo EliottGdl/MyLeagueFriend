@@ -19,7 +19,7 @@ const theme = createMuiTheme({
         height: 48,
         padding: "0 30px",
         boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-        width: 160,
+        width: "25%",
         marginLeft: 20,
         marginRight: 20,
         height: 50,
@@ -57,7 +57,7 @@ export default class Search extends Component {
     return (
       <div
         style={{
-          width: 650,
+          width: "50%",
           display: "flex",
           flexDirection: "row",
           backgroundColor: "white",
@@ -65,9 +65,9 @@ export default class Search extends Component {
           paddingBottom: 5,
         }}
       >
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme} style={{display:"flex"}}>
           <Autocomplete
-            style={{ width: 500 }}
+            style={{width:"75%"}}
             freeSolo
             onInput={this.handleChange}
             onChange={this.handleChange}

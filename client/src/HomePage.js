@@ -114,15 +114,19 @@ export default class HomePage extends Component {
                   left: 0,
                   top: 0,
                 }}
-              >
+              > 
+              <div style={{display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",flexWrap:"wrap",overflow:"none"}}>
                 <ThemeProvider theme={theme}>
                   <Typography
                     variant="h2"
                     gutterBottom
                     style={{
                       color: "white",
-                      marginTop: 280,
+                      marginTop: "25%",
                       textAlign: "center",
+                      width:"100%"
                     }}
                   >
                     Check out how your friends are doing in league ranked
@@ -137,6 +141,8 @@ export default class HomePage extends Component {
                 </ThemeProvider>
 
                 <Search registerName={this.registerBaseUser} />
+                </div>
+
                 <CookieConsent
                   location="bottom"
                   buttonText="Accept"

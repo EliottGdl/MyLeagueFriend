@@ -162,6 +162,7 @@ export default class FriendProfile extends Component {
           </Typography>
 
           <Button
+            style={{width:150}}
             onClick={() => this.props.deleteMe(this.state.infoJoueur.name)}
           >
             Delete
@@ -214,6 +215,8 @@ export default class FriendProfile extends Component {
               {this.state.infoJoueur.name} (UNRANKED){" "}
             </Typography>
             <Button
+                        style={{width:150}}
+
             onClick={() => this.props.deleteMe(this.state.infoJoueur.name)}
           >
             Delete

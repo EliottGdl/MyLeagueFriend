@@ -1,1 +1,0 @@
-exports.api = "RGAPI-f57fe5d8-52a2-4274-9897-ba4094d8687c";
